@@ -1,15 +1,12 @@
-package proxy.normalProxy;
+package proxy.dynamicProxy;
+
 
 public class GamePlayer implements IGamePlayer{
 
-    private String mName = null;
+    private String mName;
 
-    public GamePlayer(IGamePlayer iGamePlayer,String name) throws Exception{
-        if (iGamePlayer == null){
-            throw new Exception("Cannot create a true role");
-        }else {
-            mName = name;
-        }
+    public GamePlayer(String name){
+        mName = name;
     }
 
     @Override
